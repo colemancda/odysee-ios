@@ -11,7 +11,7 @@ import Odysee
 
 extension LbrySubscription {
     
-    static func fromLocalSubscription(subscription: OdyseeApp.Subscription) -> LbrySubscription {
+    static func fromLocalSubscription(subscription: OdyseeMobile.Subscription) -> LbrySubscription {
         var sub = LbrySubscription()
         let url = LbryUri.tryParse(url: subscription.url!, requireProto: false)
         if url != nil {

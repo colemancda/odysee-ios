@@ -15,8 +15,8 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "64FBE79825502A290082AF2E"
-                     BuildableName = "OdyseeApp.app"
-                     BlueprintName = "OdyseeApp"
+                     BuildableName = "OdyseeMobile.app"
+                     BlueprintName = "OdyseeMobile"
                      ReferencedContainer = "container:Odysee.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "64FBE79825502A290082AF2E"
-               BuildableName = "OdyseeApp.app"
-               BlueprintName = "OdyseeApp"
+               BuildableName = "OdyseeMobile.app"
+               BlueprintName = "OdyseeMobile"
                ReferencedContainer = "container:Odysee.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -83,8 +83,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "64FBE79825502A290082AF2E"
-            BuildableName = "OdyseeApp.app"
-            BlueprintName = "OdyseeApp"
+            BuildableName = "OdyseeMobile.app"
+            BlueprintName = "OdyseeMobile"
             ReferencedContainer = "container:Odysee.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -106,8 +106,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "64FBE79825502A290082AF2E"
-            BuildableName = "OdyseeApp.app"
-            BlueprintName = "OdyseeApp"
+            BuildableName = "OdyseeMobile.app"
+            BlueprintName = "OdyseeMobile"
             ReferencedContainer = "container:Odysee.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

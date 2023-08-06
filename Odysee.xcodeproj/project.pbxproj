@@ -204,7 +204,7 @@
 		64D0CFEC25728D2A00A89B0A /* FollowingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingViewController.swift; sourceTree = "<group>"; };
 		64D72BB4258C54B100F5C4E3 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Secrets.plist; sourceTree = "<group>"; };
 		64D72BBE258CD8AE00F5C4E3 /* StoreConfig.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreConfig.storekit; sourceTree = "<group>"; };
-		64FBE79925502A290082AF2E /* OdyseeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OdyseeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64FBE79925502A290082AF2E /* OdyseeMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OdyseeMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64FBE79C25502A290082AF2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64FBE79E25502A290082AF2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		64FBE7A025502A290082AF2E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -222,7 +222,7 @@
 		64FF81FF2604748E009B7A3B /* FirstRunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRunViewController.swift; sourceTree = "<group>"; };
 		64FF820E2604FB0B009B7A3B /* FirstRunDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRunDelegate.swift; sourceTree = "<group>"; };
 		64FF8219260507D2009B7A3B /* CreateChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateChannelViewController.swift; sourceTree = "<group>"; };
-		6E3E40E72A7E301E0065CF17 /* odysee-ios */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "odysee-ios"; sourceTree = "<group>"; };
+		6E31F18F2A7F4BF800E568F8 /* odysee-ios */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "odysee-ios"; sourceTree = "<group>"; };
 		6E3E40EB2A7E31480065CF17 /* LbrySubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LbrySubscription.swift; sourceTree = "<group>"; };
 		6E3E40ED2A7E32230065CF17 /* ResolveResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResolveResult.swift; sourceTree = "<group>"; };
 		6E3E40EF2A7E32930065CF17 /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
@@ -436,7 +436,7 @@
 		64FBE79A25502A290082AF2E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				64FBE79925502A290082AF2E /* OdyseeApp.app */,
+				64FBE79925502A290082AF2E /* OdyseeMobile.app */,
 				64FBE7B225502A2D0082AF2E /* OdyseeAppTests.xctest */,
 				64FBE7BD25502A2D0082AF2E /* OdyseeUITests.xctest */,
 			);
@@ -527,7 +527,7 @@
 		6ED8760D2A7E26D6003C66BF /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				6E3E40E72A7E301E0065CF17 /* odysee-ios */,
+				6E31F18F2A7F4BF800E568F8 /* odysee-ios */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -535,9 +535,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		64FBE79825502A290082AF2E /* OdyseeApp */ = {
+		64FBE79825502A290082AF2E /* OdyseeMobile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 64FBE7C625502A2D0082AF2E /* Build configuration list for PBXNativeTarget "OdyseeApp" */;
+			buildConfigurationList = 64FBE7C625502A2D0082AF2E /* Build configuration list for PBXNativeTarget "OdyseeMobile" */;
 			buildPhases = (
 				64FBE79525502A290082AF2E /* Sources */,
 				64FBE79625502A290082AF2E /* Frameworks */,
@@ -547,7 +547,7 @@
 			);
 			dependencies = (
 			);
-			name = OdyseeApp;
+			name = OdyseeMobile;
 			packageProductDependencies = (
 				6411C0AF255B35260018C3D5 /* Base58Swift */,
 				64533588257FDC6800C49BD1 /* FirebaseAnalytics */,
@@ -562,7 +562,7 @@
 				6E3E40F12A7E342E0065CF17 /* Odysee */,
 			);
 			productName = Odysee;
-			productReference = 64FBE79925502A290082AF2E /* OdyseeApp.app */;
+			productReference = 64FBE79925502A290082AF2E /* OdyseeMobile.app */;
 			productType = "com.apple.product-type.application";
 		};
 		64FBE7B125502A2D0082AF2E /* OdyseeAppTests */ = {
@@ -654,7 +654,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				64FBE79825502A290082AF2E /* OdyseeApp */,
+				64FBE79825502A290082AF2E /* OdyseeMobile */,
 				64FBE7B125502A2D0082AF2E /* OdyseeAppTests */,
 				64FBE7BC25502A2D0082AF2E /* OdyseeUITests */,
 			);
@@ -800,12 +800,12 @@
 /* Begin PBXTargetDependency section */
 		64FBE7B425502A2D0082AF2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 64FBE79825502A290082AF2E /* OdyseeApp */;
+			target = 64FBE79825502A290082AF2E /* OdyseeMobile */;
 			targetProxy = 64FBE7B325502A2D0082AF2E /* PBXContainerItemProxy */;
 		};
 		64FBE7BF25502A2D0082AF2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 64FBE79825502A290082AF2E /* OdyseeApp */;
+			target = 64FBE79825502A290082AF2E /* OdyseeMobile */;
 			targetProxy = 64FBE7BE25502A2D0082AF2E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1112,7 +1112,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		64FBE7C625502A2D0082AF2E /* Build configuration list for PBXNativeTarget "OdyseeApp" */ = {
+		64FBE7C625502A2D0082AF2E /* Build configuration list for PBXNativeTarget "OdyseeMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				64FBE7C725502A2D0082AF2E /* Debug */,
