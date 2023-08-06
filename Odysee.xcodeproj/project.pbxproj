@@ -85,6 +85,15 @@
 		64FF82002604748E009B7A3B /* FirstRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FF81FF2604748E009B7A3B /* FirstRunViewController.swift */; };
 		64FF820F2604FB0B009B7A3B /* FirstRunDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FF820E2604FB0B009B7A3B /* FirstRunDelegate.swift */; };
 		64FF821A260507D2009B7A3B /* CreateChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FF8219260507D2009B7A3B /* CreateChannelViewController.swift */; };
+		6E31F1972A7F4E1500E568F8 /* OdyseeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E31F1962A7F4E1500E568F8 /* OdyseeApp.swift */; };
+		6E31F19F2A7F4E1600E568F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E31F19E2A7F4E1600E568F8 /* Preview Assets.xcassets */; };
+		6E31F1A32A7F4E9600E568F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64FBE7A825502A2C0082AF2E /* Assets.xcassets */; };
+		6E31F1AF2A8013A300E568F8 /* OdyseeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E31F1A92A8013A300E568F8 /* OdyseeKit.framework */; };
+		6E31F1B02A8013A300E568F8 /* OdyseeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E31F1A92A8013A300E568F8 /* OdyseeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E31F1BB2A80155D00E568F8 /* Odysee in Frameworks */ = {isa = PBXBuildFile; productRef = 6E31F1BA2A80155D00E568F8 /* Odysee */; };
+		6E31F1BF2A80191200E568F8 /* LBRY in Frameworks */ = {isa = PBXBuildFile; productRef = 6E31F1BE2A80191200E568F8 /* LBRY */; };
+		6E31F1C12A80224B00E568F8 /* VideoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E31F1C02A80224B00E568F8 /* VideoRowView.swift */; };
+		6E31F1C32A80277200E568F8 /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E31F1C22A80277200E568F8 /* CachedAsyncImage.swift */; };
 		6E3E40EC2A7E31480065CF17 /* LbrySubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3E40EB2A7E31480065CF17 /* LbrySubscription.swift */; };
 		6E3E40EE2A7E32230065CF17 /* ResolveResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3E40ED2A7E32230065CF17 /* ResolveResult.swift */; };
 		6E3E40F02A7E32930065CF17 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3E40EF2A7E32930065CF17 /* Reward.swift */; };
@@ -125,7 +134,28 @@
 			remoteGlobalIDString = 64FBE79825502A290082AF2E;
 			remoteInfo = Odysee;
 		};
+		6E31F1AD2A8013A300E568F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64FBE79125502A290082AF2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E31F1A82A8013A300E568F8;
+			remoteInfo = OdyseeKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6E31F1B42A8013A300E568F8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6E31F1B02A8013A300E568F8 /* OdyseeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		532650E3286EAB1B00F0FF0B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -223,6 +253,17 @@
 		64FF820E2604FB0B009B7A3B /* FirstRunDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRunDelegate.swift; sourceTree = "<group>"; };
 		64FF8219260507D2009B7A3B /* CreateChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateChannelViewController.swift; sourceTree = "<group>"; };
 		6E31F18F2A7F4BF800E568F8 /* odysee-ios */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "odysee-ios"; sourceTree = "<group>"; };
+		6E31F1942A7F4E1500E568F8 /* OdyseeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OdyseeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E31F1962A7F4E1500E568F8 /* OdyseeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdyseeApp.swift; sourceTree = "<group>"; };
+		6E31F19C2A7F4E1600E568F8 /* OdyseeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OdyseeApp.entitlements; sourceTree = "<group>"; };
+		6E31F19E2A7F4E1600E568F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6E31F1A92A8013A300E568F8 /* OdyseeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OdyseeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E31F1B62A8013CE00E568F8 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		6E31F1B72A8013CE00E568F8 /* StorePreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePreferences.swift; sourceTree = "<group>"; };
+		6E31F1B82A8013CE00E568F8 /* StoreNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreNetworking.swift; sourceTree = "<group>"; };
+		6E31F1B92A8013CE00E568F8 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		6E31F1C02A80224B00E568F8 /* VideoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRowView.swift; sourceTree = "<group>"; };
+		6E31F1C22A80277200E568F8 /* CachedAsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
 		6E3E40EB2A7E31480065CF17 /* LbrySubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LbrySubscription.swift; sourceTree = "<group>"; };
 		6E3E40ED2A7E32230065CF17 /* ResolveResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResolveResult.swift; sourceTree = "<group>"; };
 		6E3E40EF2A7E32930065CF17 /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
@@ -277,6 +318,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E31F1912A7F4E1500E568F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E31F1AF2A8013A300E568F8 /* OdyseeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E31F1A62A8013A300E568F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E31F1BB2A80155D00E568F8 /* Odysee in Frameworks */,
+				6E31F1BF2A80191200E568F8 /* LBRY in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +486,8 @@
 				649EA90526528D8D00F45129 /* launch_screen.png */,
 				64FBE79B25502A290082AF2E /* Odysee */,
 				64FBE7C025502A2D0082AF2E /* OdyseeUITests */,
+				6E31F1952A7F4E1500E568F8 /* OdyseeApp */,
+				6E31F1AA2A8013A300E568F8 /* OdyseeKit */,
 				64FBE79A25502A290082AF2E /* Products */,
 				6411C0A0255B31C00018C3D5 /* Frameworks */,
 			);
@@ -439,6 +499,8 @@
 				64FBE79925502A290082AF2E /* OdyseeMobile.app */,
 				64FBE7B225502A2D0082AF2E /* OdyseeAppTests.xctest */,
 				64FBE7BD25502A2D0082AF2E /* OdyseeUITests.xctest */,
+				6E31F1942A7F4E1500E568F8 /* OdyseeApp.app */,
+				6E31F1A92A8013A300E568F8 /* OdyseeKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -499,6 +561,53 @@
 			path = FirstRun;
 			sourceTree = "<group>";
 		};
+		6E31F1952A7F4E1500E568F8 /* OdyseeApp */ = {
+			isa = PBXGroup;
+			children = (
+				6E31F1962A7F4E1500E568F8 /* OdyseeApp.swift */,
+				6E31F19C2A7F4E1600E568F8 /* OdyseeApp.entitlements */,
+				6E31F19D2A7F4E1600E568F8 /* Preview Content */,
+			);
+			path = OdyseeApp;
+			sourceTree = "<group>";
+		};
+		6E31F19D2A7F4E1600E568F8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6E31F19E2A7F4E1600E568F8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6E31F1AA2A8013A300E568F8 /* OdyseeKit */ = {
+			isa = PBXGroup;
+			children = (
+				6E31F1BC2A80184B00E568F8 /* View */,
+				6E31F1B52A8013CE00E568F8 /* Model */,
+			);
+			path = OdyseeKit;
+			sourceTree = "<group>";
+		};
+		6E31F1B52A8013CE00E568F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6E31F1B62A8013CE00E568F8 /* Preferences.swift */,
+				6E31F1B72A8013CE00E568F8 /* StorePreferences.swift */,
+				6E31F1B82A8013CE00E568F8 /* StoreNetworking.swift */,
+				6E31F1B92A8013CE00E568F8 /* Store.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6E31F1BC2A80184B00E568F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6E31F1C22A80277200E568F8 /* CachedAsyncImage.swift */,
+				6E31F1C02A80224B00E568F8 /* VideoRowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6E3E40E92A7E308E0065CF17 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -533,6 +642,16 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6E31F1A42A8013A300E568F8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		64FBE79825502A290082AF2E /* OdyseeMobile */ = {
@@ -601,13 +720,54 @@
 			productReference = 64FBE7BD25502A2D0082AF2E /* OdyseeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		6E31F1932A7F4E1500E568F8 /* OdyseeApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E31F1A02A7F4E1600E568F8 /* Build configuration list for PBXNativeTarget "OdyseeApp" */;
+			buildPhases = (
+				6E31F1902A7F4E1500E568F8 /* Sources */,
+				6E31F1912A7F4E1500E568F8 /* Frameworks */,
+				6E31F1922A7F4E1500E568F8 /* Resources */,
+				6E31F1B42A8013A300E568F8 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E31F1AE2A8013A300E568F8 /* PBXTargetDependency */,
+			);
+			name = OdyseeApp;
+			productName = OdyseeApp;
+			productReference = 6E31F1942A7F4E1500E568F8 /* OdyseeApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6E31F1A82A8013A300E568F8 /* OdyseeKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E31F1B12A8013A300E568F8 /* Build configuration list for PBXNativeTarget "OdyseeKit" */;
+			buildPhases = (
+				6E31F1A42A8013A300E568F8 /* Headers */,
+				6E31F1A52A8013A300E568F8 /* Sources */,
+				6E31F1A62A8013A300E568F8 /* Frameworks */,
+				6E31F1A72A8013A300E568F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OdyseeKit;
+			packageProductDependencies = (
+				6E31F1BA2A80155D00E568F8 /* Odysee */,
+				6E31F1BE2A80191200E568F8 /* LBRY */,
+			);
+			productName = OdyseeKit;
+			productReference = 6E31F1A92A8013A300E568F8 /* OdyseeKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		64FBE79125502A290082AF2E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1210;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					64FBE79825502A290082AF2E = {
@@ -620,6 +780,13 @@
 					64FBE7BC25502A2D0082AF2E = {
 						CreatedOnToolsVersion = 12.1;
 						TestTargetID = 64FBE79825502A290082AF2E;
+					};
+					6E31F1932A7F4E1500E568F8 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					6E31F1A82A8013A300E568F8 = {
+						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -649,6 +816,7 @@
 				CCFB0B4D26653E0800696E0C /* XCRemoteSwiftPackageReference "swift-collections" */,
 				64A26CE326974B7900AE19DE /* XCRemoteSwiftPackageReference "Perfect-Markdown" */,
 				64019A0C269C101C00E16A51 /* XCRemoteSwiftPackageReference "ImageScrollView" */,
+				6E31F1BD2A80191200E568F8 /* XCRemoteSwiftPackageReference "LBRY" */,
 			);
 			productRefGroup = 64FBE79A25502A290082AF2E /* Products */;
 			projectDirPath = "";
@@ -657,6 +825,8 @@
 				64FBE79825502A290082AF2E /* OdyseeMobile */,
 				64FBE7B125502A2D0082AF2E /* OdyseeAppTests */,
 				64FBE7BC25502A2D0082AF2E /* OdyseeUITests */,
+				6E31F1932A7F4E1500E568F8 /* OdyseeApp */,
+				6E31F1A82A8013A300E568F8 /* OdyseeKit */,
 			);
 		};
 /* End PBXProject section */
@@ -687,6 +857,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		64FBE7BB25502A2D0082AF2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E31F1922A7F4E1500E568F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E31F19F2A7F4E1600E568F8 /* Preview Assets.xcassets in Resources */,
+				6E31F1A32A7F4E9600E568F8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E31F1A72A8013A300E568F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -795,6 +981,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6E31F1902A7F4E1500E568F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E31F1972A7F4E1500E568F8 /* OdyseeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E31F1A52A8013A300E568F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E31F1C32A80277200E568F8 /* CachedAsyncImage.swift in Sources */,
+				6E31F1C12A80224B00E568F8 /* VideoRowView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -807,6 +1010,11 @@
 			isa = PBXTargetDependency;
 			target = 64FBE79825502A290082AF2E /* OdyseeMobile */;
 			targetProxy = 64FBE7BE25502A2D0082AF2E /* PBXContainerItemProxy */;
+		};
+		6E31F1AE2A8013A300E568F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E31F1A82A8013A300E568F8 /* OdyseeKit */;
+			targetProxy = 6E31F1AD2A8013A300E568F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1100,6 +1308,187 @@
 			};
 			name = Release;
 		};
+		6E31F1A12A7F4E1600E568F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = OdyseeApp/OdyseeApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"OdyseeApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 4W79SG34MW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Odysee;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.colemancda.OdyseeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 16.0;
+			};
+			name = Debug;
+		};
+		6E31F1A22A7F4E1600E568F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = OdyseeApp/OdyseeApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"OdyseeApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 4W79SG34MW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Odysee;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.colemancda.OdyseeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 16.0;
+			};
+			name = Release;
+		};
+		6E31F1B22A8013A300E568F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4W79SG34MW;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.colemancda.OdyseeKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TVOS_DEPLOYMENT_TARGET = 16.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6E31F1B32A8013A300E568F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4W79SG34MW;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.colemancda.OdyseeKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TVOS_DEPLOYMENT_TARGET = 16.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1135,6 +1524,24 @@
 			buildConfigurations = (
 				64FBE7CD25502A2D0082AF2E /* Debug */,
 				64FBE7CE25502A2D0082AF2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E31F1A02A7F4E1600E568F8 /* Build configuration list for PBXNativeTarget "OdyseeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E31F1A12A7F4E1600E568F8 /* Debug */,
+				6E31F1A22A7F4E1600E568F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E31F1B12A8013A300E568F8 /* Build configuration list for PBXNativeTarget "OdyseeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E31F1B22A8013A300E568F8 /* Debug */,
+				6E31F1B32A8013A300E568F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1198,6 +1605,14 @@
 				minimumVersion = 3.2.0;
 			};
 		};
+		6E31F1BD2A80191200E568F8 /* XCRemoteSwiftPackageReference "LBRY" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MillerTechnologyPeru/LBRY.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		CCDDA927265861AF0006035F /* XCRemoteSwiftPackageReference "PINRemoteImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pinterest/PINRemoteImage";
@@ -1256,6 +1671,15 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 64A26CE326974B7900AE19DE /* XCRemoteSwiftPackageReference "Perfect-Markdown" */;
 			productName = PerfectMarkdown;
+		};
+		6E31F1BA2A80155D00E568F8 /* Odysee */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Odysee;
+		};
+		6E31F1BE2A80191200E568F8 /* LBRY */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E31F1BD2A80191200E568F8 /* XCRemoteSwiftPackageReference "LBRY" */;
+			productName = LBRY;
 		};
 		6E3E40F12A7E342E0065CF17 /* Odysee */ = {
 			isa = XCSwiftPackageProductDependency;
