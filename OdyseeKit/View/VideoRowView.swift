@@ -11,23 +11,19 @@ import LBRY
 
 public struct VideoRowView: View {
     
-    public let claim: LBRY.Claim
-    
-    public let showChannelName: Bool
+    let item: Item
     
     public init(
-        claim: LBRY.Claim,
-        showChannelName: Bool = true
+        item: Item
     ) {
-        self.claim = claim
-        self.showChannelName = showChannelName
+        self.item = item
     }
     
     public var body: some View {
         HStack {
             
             // thumbnail
-            CachedAsyncImage(url: claim.value?.thumbnail?.url, scale: 2.0, content: { image in
+            CachedAsyncImage(url: item.thumbnail, scale: 2.0, content: { image in
                 image
                     .resizable()
                     .cornerRadius(8)
@@ -42,21 +38,16 @@ public struct VideoRowView: View {
             // text
             VStack(alignment: .leading, spacing: 16) {
                 // title
-                if let name = claim.value?.title {
-                    Text(verbatim: name)
-                        .lineLimit(2)
-                        .font(.headline)
-                        .foregroundColor(.primary)
-                }
+                Text(verbatim: item.title)
+                    .lineLimit(2)
+                    .font(.headline)
+                    .foregroundColor(.primary)
                 
                 // channel details
-                if showChannelName,
-                   let thumbnailURL = claim.signingChannel?.value?.thumbnail?.url,
-                   let channelName = claim.signingChannel?.normalizedName,
-                   let timestamp = self.relativeTimestamp {
+                if let channel = item.channel {
                     HStack(spacing: 16) {
                         // channel image
-                        CachedAsyncImage(url: thumbnailURL, scale: 2.0, content: { image in
+                        CachedAsyncImage(url: channel.thumbnail, scale: 2.0, content: { image in
                             image
                                 .resizable()
                         }, placeholder: {
@@ -71,21 +62,23 @@ public struct VideoRowView: View {
                         
                         // channel name
                         VStack(alignment: .leading, spacing: 6) {
-                            Text(verbatim: channelName)
+                            Text(verbatim: channel.name)
                                 .lineLimit(1)
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
                             
-                            Text(verbatim: timestamp)
-                                .lineLimit(1)
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
+                            if let relativeTimestamp {
+                                Text(verbatim: relativeTimestamp)
+                                    .lineLimit(1)
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                            }
                         }
                     }
                 }
                 
                 // description
-                if let description = claim.value?.description {
+                if let description = item.descriptionText {
                     Text(verbatim: description)
                         .lineLimit(2)
                         .font(.subheadline)
@@ -93,6 +86,58 @@ public struct VideoRowView: View {
                 }
             }
         }
+    }
+}
+
+public extension VideoRowView {
+    
+    struct Item {
+        
+        public let title: String
+        
+        public let thumbnail: URL?
+        
+        public let descriptionText: String?
+        
+        public let timestamp: Date?
+        
+        public let channel: ChannelInfo?
+    }
+    
+    struct ChannelInfo {
+        
+        public let name: String
+        
+        public let thumbnail: URL?
+    }
+}
+
+public extension VideoRowView.Item {
+    
+    init(claim: Claim) {
+        self.title = claim.value?.title ?? claim.name ?? "Unnamed Video"
+        self.thumbnail = claim.value?.thumbnail?.url
+        self.descriptionText = claim.value?.description
+        self.timestamp = claim.timestamp.map { Date(timeIntervalSince1970: TimeInterval($0)) }
+        self.channel = claim.signingChannel.map { .init(signingChannel: $0) }
+    }
+}
+
+public extension VideoRowView.ChannelInfo {
+    
+    init(signingChannel claim: Claim) {
+        self.name = claim.name ?? ""
+        self.thumbnail = claim.value?.thumbnail?.url
+    }
+}
+
+public extension VideoRowView {
+    
+    init(
+        claim: LBRY.Claim
+    ) {
+        let item = Item(claim: claim)
+        self.init(item: item)
     }
 }
 
@@ -105,19 +150,23 @@ private extension VideoRowView {
     }()
     
     var thumbnailSize: CGSize {
+        #if os(tvOS)
         CGSize(width: 470, height: 270)
+        #else
+        CGSize(width: 150, height: 100)
+        #endif
     }
     
     var channelThumbnailSize: CGSize {
+        #if os(tvOS)
         CGSize(width: 60, height: 60)
-    }
-    
-    var timestamp: Date? {
-        claim.timestamp.map { Date(timeIntervalSince1970: TimeInterval($0)) }
+        #else
+        CGSize(width: 20, height: 20)
+        #endif
     }
     
     var relativeTimestamp: String? {
-        timestamp.map { Self.relativeDateTimeFormatter.localizedString(for: $0, relativeTo: Date()) }
+        item.timestamp.map { Self.relativeDateTimeFormatter.localizedString(for: $0, relativeTo: Date()) }
     }
 }
 
