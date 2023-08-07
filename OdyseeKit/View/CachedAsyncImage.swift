@@ -74,7 +74,7 @@ public struct CachedAsyncImage<Content>: View where Content: View {
     
     private let scale: CGFloat
     
-    private let transaction: Transaction
+    private let transaction: SwiftUI.Transaction
     
     private let content: (AsyncImagePhase) -> Content
     
@@ -254,7 +254,7 @@ public struct CachedAsyncImage<Content>: View where Content: View {
     ///   - transaction: The transaction to use when the phase changes.
     ///   - content: A closure that takes the load phase as an input, and
     ///     returns the view to display for the specified phase.
-    public init(url: URL?, urlCache: URLCache = .shared, scale: CGFloat = 1, transaction: Transaction = Transaction(), @ViewBuilder content: @escaping (AsyncImagePhase) -> Content) {
+    public init(url: URL?, urlCache: URLCache = .shared, scale: CGFloat = 1, transaction: SwiftUI.Transaction = Transaction(), @ViewBuilder content: @escaping (AsyncImagePhase) -> Content) {
         let urlRequest = url == nil ? nil : URLRequest(url: url!)
         self.init(urlRequest: urlRequest, urlCache: urlCache, scale: scale, transaction: transaction, content: content)
     }
@@ -294,7 +294,7 @@ public struct CachedAsyncImage<Content>: View where Content: View {
     ///   - transaction: The transaction to use when the phase changes.
     ///   - content: A closure that takes the load phase as an input, and
     ///     returns the view to display for the specified phase.
-    public init(urlRequest: URLRequest?, urlCache: URLCache = .shared, scale: CGFloat = 1, transaction: Transaction = Transaction(), @ViewBuilder content: @escaping (AsyncImagePhase) -> Content) {
+    public init(urlRequest: URLRequest?, urlCache: URLCache = .shared, scale: CGFloat = 1, transaction: SwiftUI.Transaction = Transaction(), @ViewBuilder content: @escaping (AsyncImagePhase) -> Content) {
         let configuration = URLSessionConfiguration.default
         configuration.urlCache = urlCache
         self.urlRequest = urlRequest

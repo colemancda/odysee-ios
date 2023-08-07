@@ -114,7 +114,7 @@ public extension VideoRowView {
 
 public extension VideoRowView.Item {
     
-    init(claim: Claim) {
+    init(claim: LBRY.Claim) {
         self.title = claim.value?.title ?? claim.name ?? "Unnamed Video"
         self.thumbnail = claim.value?.thumbnail?.url
         self.descriptionText = claim.value?.description
@@ -125,7 +125,7 @@ public extension VideoRowView.Item {
 
 public extension VideoRowView.ChannelInfo {
     
-    init(signingChannel claim: Claim) {
+    init(signingChannel claim: LBRY.Claim) {
         self.name = claim.name ?? ""
         self.thumbnail = claim.value?.thumbnail?.url
     }
@@ -172,10 +172,11 @@ private extension VideoRowView {
 
 #if DEBUG
 
+@available(iOS 16.0, *)
 struct VideoRowView_Preview: PreviewProvider {
     
     static var previews: some View {
-        NavigationView {
+        NavigationStack {
             List(Claim.mock, id: \.claimId) {
                 VideoRowView(claim: $0)
             }
