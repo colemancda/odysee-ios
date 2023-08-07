@@ -17,7 +17,7 @@ internal extension Store {
 
 private extension Store {
     
-    func authorizationToken() async throws -> Odysee.AuthorizationToken {
+    func authorizationToken() async throws -> Odysee.AuthorizationToken? {
         /*
         guard let user = self.username,
               let token = self[token: user] else {
@@ -32,8 +32,12 @@ private extension Store {
 public extension Store {
     
     /// Fetch Odysee content.
-    func fetchContent() async throws -> [String: Content] {
+    func fetchContent() async throws -> Content {
         let token = try await authorizationToken()
-        return try await urlSession.fetchContent(authorization: token, server: .production)
+        let response = try await urlSession.fetchContent(authorization: token, server: .production)
+        guard let content = response[Locale.current.language.minimalIdentifier] ?? response["en"] ?? response.values.first else {
+            throw OdyseeError.invalidResponse(Data())
+        }
+        return content
     }
 }
